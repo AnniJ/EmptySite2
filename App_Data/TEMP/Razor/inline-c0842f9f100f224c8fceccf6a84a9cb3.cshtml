@@ -1,0 +1,25 @@
+﻿@inherits umbraco.MacroEngines.DynamicNodeContext
+				
+				
+				@* Ensure that the Current Page has children, where the property umbracoNaviHide is not True *@
+				@if (Model.Children.Where("Visible").Any())
+				{
+					<ul class="unstyled">            
+						@* For each child page under the root node, where the property umbracoNaviHide is not True *@
+						@foreach (var childPage in Model.Children.Where("Visible"))
+						{
+							<li>
+								<dl>
+									<dt style="float: left;
+									overflow: hidden;
+									clear: left;
+									text-align: right;
+									text-overflow: ellipsis;
+									white-space: nowrap;">Anni Jensen</dt>
+									<dd style="margin-left:100px;">mobil: 20112255</dd>
+								</dl>
+								@childPage.Fornavn @childPage.Efternavn  tlf: @childPage.Mobilnr
+							</li>
+						}
+					</ul>
+				}

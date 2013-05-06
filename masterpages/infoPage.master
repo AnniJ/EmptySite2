@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/Master.master" AutoEventWireup="true" %>
+
+<asp:Content ContentPlaceHolderID="Content" runat="server">
+
+	
+	<section class="span9" id="Infotext">
+		<header>
+			<h2>
+				<umbraco:Item field="pageName" runat="server" />
+			</h2>
+			<hr id="hr">
+		</header>
+	
+		<umbraco:Item field="infotekst" runat="server" />
+		
+	</section>
+	<section class="span3" id="RightSidebar">
+		<section class="span3" id="Adresse">
+			<header>
+				<h2>
+					Adresse
+				</h2>
+				<hr id="hr">
+			</header>
+			
+			<address>
+			  <strong><umbraco:Item field="navn" runat="server" /></strong><br>
+			  <umbraco:Item field="adresse" runat="server" /><br>
+			  <umbraco:Item field="postnr" runat="server" />, <umbraco:Item field="by" runat="server" /><br>
+				Tlf: <umbraco:Item field="telefonnr" runat="server" /><br/>
+				Fax: <umbraco:Item field="fax" runat="server" />
+			</address>
+			
+			<hr id="hr">
+		</section>
+		<section class="span3" id="kontakt">
+			<header>
+				<h2>
+					Kontakter
+				</h2>
+				<hr id="hr">
+			</header>
+			<div>					
+				
+				<umbraco:Macro  runat="server" language="cshtml">
+				@inherits umbraco.MacroEngines.DynamicNodeContext
+				
+				
+				@* Ensure that the Current Page has children, where the property umbracoNaviHide is not True *@
+				@if (Model.Children.Where("Visible").Any())
+				{
+					<ul class="unstyled">            
+						@* For each child page under the root node, where the property umbracoNaviHide is not True *@
+						@foreach (var childPage in Model.Children.Where("Visible").OrderBy("Position"))
+						{						
+						
+							<li>
+								<dl class="dl-myStyle">
+									<dt>@childPage.Fornavn @childPage.Efternavn</dt>
+									<dd>tlf: @childPage.Mobilnr</dd>
+								</dl>
+								  
+							</li>
+						}
+					</ul>
+				}
+				
+				</umbraco:Macro>
+				
+				
+			</div>
+		
+		</section>
+	</section>
+	
+	
+	
+	
+</asp:Content>

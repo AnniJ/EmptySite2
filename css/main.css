@@ -36,6 +36,27 @@ header{
 
 
 
+.dl-myStyle{
+	display: block;
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	
+}
+.dl-myStyle dt {
+
+			float: left;
+			overflow: hidden;
+			clear: left;
+			text-align: right;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+
+}
+.dl-myStyle dd {
+					margin-left:10em;
+				}
 
 
 
@@ -47,3 +68,5 @@ header{
 
 
 
+
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */
