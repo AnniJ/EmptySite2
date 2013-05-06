@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/Master.master" AutoEventWireup="true" %>
+
+<asp:Content ContentPlaceHolderID="Content" runat="server">
+
+	<main class="row">
+
+                <section class="span6" id="reviews">
+                    <header>
+                        <h3>ANMELDELSER</h3>
+                        <hr id="hr">
+                    </header>
+                    <div class="row">
+						
+						<!-- Marco der viser en list over child for Anmeldelser-->
+                        
+     
+                    </div>
+                </section>
+
+                <section class="span3">
+                 <header>
+                        <h3>Koncerter</h3>
+                        <hr id="hr">
+                    </header>
+                    <div class="row">
+                        
+						<!-- Marco der viser child for Koncerter -->
+						
+                    </div>
+               </section>
+
+                <section class="span3">
+                   <header>
+                        <h3>Tweets</h3>
+                        
+                        <hr id="hr">
+                    </header>
+                    <div class="row">
+                        <article class="span3">
+                                  <a class="twitter-timeline" href="https://twitter.com/Nickelback" data-widget-id="304597001880870912">Tweets by @Nickelback</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+                                <p><hr id="hr"></p>
+                        </article>
+                    </div>
+                </section>
+	
+</asp:Content>

@@ -1,0 +1,49 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+html {
+	width: 100%;
+
+}
+
+body {
+	background: url(../img/bg.jpg) no-repeat center center fixed; 
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	background-width: 100%;
+
+	font-family: Tahoma, Sans-serif;
+	color: white;
+}
+
+#hr {
+	border-top: 1px solid #0042a5;
+	border-bottom: 1px solid rgb(49, 125, 236);
+}
+.brand {
+	font-family: Gill Sans Ultra Bold, Sans-serif;
+}
+
+header{
+	background: url(../img/BEAT-logo1.png) no-repeat center center fixed;
+	}
+/*  #0042a5v  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

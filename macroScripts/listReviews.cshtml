@@ -1,0 +1,36 @@
+﻿@inherits umbraco.MacroEngines.DynamicNodeContext
+
+@*
+	This snippet shows how simple it is to fetch only children of a certain Document Type using Razor. Instead of
+	calling .Children, simply call .AliasOfDocumentType in plural.
+	For instance .Textpages or .NewsArticles (you can find the alias of your Document Type by editing it in the 
+	Settings section).
+*@
+
+
+@{    
+	@*Build a query and return the visible items *@
+	var selection= Model.Reviews.Where("Visible");
+}
+
+@*Determine if there are any nodes in the selection, then render list *@
+@if(selection.Any()){
+
+   <ul>
+     @foreach(var page in selection.OrderBy("CreateDate desc")){                
+       	<li class="span6">
+			<div class="media-body">
+		   		<a href="@page.Url"><h4>@page.Name</h4></a>
+			<p>
+				@page.Summary
+				<br/>
+				@page.CreateDate.ToLongDateString()
+			</p>
+			</div>
+			<p><hr id="hr"></p>
+		</li> 
+     }                 
+   </ul>             
+
+}
+

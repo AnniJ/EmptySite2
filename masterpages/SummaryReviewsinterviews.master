@@ -1,0 +1,16 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/Master.master" AutoEventWireup="true" %>
+
+<asp:Content ContentPlaceHolderID="Content" runat="server">
+	
+	<umbraco:Item field="introduction" runat="server" />
+
+	 <section class="span6" id="reviews">
+		 <header>
+			 <h3>ANMELDELSER &amp; INTERVIEWS</h3>
+			 <hr id="hr">
+		 </header>
+	<div class="row">
+		<umbraco:Macro Alias="ListReviews" runat="server"></umbraco:Macro>
+	</div>
+	
+</asp:Content>
