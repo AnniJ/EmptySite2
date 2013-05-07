@@ -833,3 +833,6 @@ System.NullReferenceException: Object reference not set to an instance of an obj
 2013-05-07 11:51:22,196 [8] INFO  umbraco.content - [Thread 10] Loading content from disk cache...
 2013-05-07 11:51:22,302 [8] INFO  Umbraco.Core.PluginManager - [Thread 10] Completed resolution of types of umbraco.cms.businesslogic.macro.IMacroEngine, found 2 (took 1ms)
 2013-05-07 11:52:39,399 [8] INFO  umbraco.BasePages.BasePage - [Thread 15] User admin (Id: 0) logged in
+2013-05-07 11:56:51,715 [8] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of umbraco.interfaces.IDataType, found 35 (took 2ms)
+2013-05-07 11:56:51,721 [8] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of umbraco.interfaces.ITree, found 36 (took 1ms)
+2013-05-07 11:56:51,738 [8] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of umbraco.MacroEngines.IRazorDataTypeModel, found 2 (took 2ms)
