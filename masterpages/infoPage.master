@@ -56,7 +56,7 @@
 						
 							<li>
 								<dl class="dl-myStyle">
-									<dt>@childPage.Fornavn @childPage.Efternavn</dt>
+									<dt><abbr title="@childPage.Position">@childPage.Fornavn @childPage.Efternavn</abbr></dt>
 									<dd>tlf: @childPage.Mobilnr</dd>
 								</dl>
 								  
